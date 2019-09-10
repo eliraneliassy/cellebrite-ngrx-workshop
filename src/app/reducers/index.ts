@@ -1,3 +1,4 @@
+import { AuthState, reducer } from './../features/auth/auth.reducer';
 import {
   ActionReducer,
   ActionReducerMap,
@@ -8,11 +9,11 @@ import {
 import { environment } from '../../environments/environment';
 
 export interface State {
-
+  auth: AuthState;
 }
 
 export const reducers: ActionReducerMap<State> = {
-
+  auth: reducer
 };
 
 
