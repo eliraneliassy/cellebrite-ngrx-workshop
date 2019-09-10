@@ -1,1 +1,8 @@
-{{userName}}
+<div class="container">
+    <div *ngFor="let item of items">
+        {{item.title}}
+        <img [src]="item.imageUrl">
+        {{item.description}}
+        {{item.price}}
+    </div>
+</div>

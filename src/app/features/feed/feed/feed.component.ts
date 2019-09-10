@@ -1,3 +1,4 @@
+import { FeedService } from './../../../../../services/feed.service';
 import { AuthService } from './../../../../../services/auth.service';
 import { Component, OnInit } from '@angular/core';
 
@@ -8,12 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FeedComponent implements OnInit {
 
-  userName: string;
+  userName = 'Eliran';
+  items: any[];
 
-  constructor(private authService: AuthService) { }
+  constructor(
+    private authService: AuthService,
+    private feedService: FeedService) { }
 
   ngOnInit() {
-    this.authService.getUserName().subscribe(user => this.userName = user);
+    this.feedService.getFeed(0).subscribe((items: any[]) => {
+      this.items = items;
+    })
   }
 
 }
+
