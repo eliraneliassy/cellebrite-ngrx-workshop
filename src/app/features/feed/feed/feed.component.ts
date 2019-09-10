@@ -1,5 +1,5 @@
-import { FeedService } from './../../../../../services/feed.service';
-import { AuthService } from './../../../../../services/auth.service';
+import { FeedService } from '../../../services/feed.service';
+import { AuthService } from '../../../services/auth.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
