@@ -1,1 +1,15 @@
-<p>auth works!</p>
+<div class="container ">
+    <form [formGroup]="form">
+        <div class="d-flex flex-column">
+            <p>
+                Please login
+            </p>
+
+            <input type="text" formControlName="userName">
+            <button class="btn btn-primary"
+            [disabled]="!form.valid"
+            (click)="login()">Login</button>
+
+        </div>
+    </form>
+</div>
