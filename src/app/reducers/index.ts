@@ -1,4 +1,5 @@
-import { AuthState, reducer } from './../features/auth/auth.reducer';
+import { FeedState, feedReducer } from './../features/feed/feed.reducer';
+import { AuthState, authReducer } from './../features/auth/auth.reducer';
 import {
   ActionReducer,
   ActionReducerMap,
@@ -10,10 +11,12 @@ import { environment } from '../../environments/environment';
 
 export interface State {
   auth: AuthState;
+  feed: FeedState;
 }
 
 export const reducers: ActionReducerMap<State> = {
-  auth: reducer
+  auth: authReducer,
+  feed: feedReducer
 };
 
 

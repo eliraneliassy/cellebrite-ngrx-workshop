@@ -1,5 +1,5 @@
 <div class="container">
-    <div *ngFor="let item of items">
+    <div *ngFor="let item of (items$ | async)">
         {{item.title}}
         <img [src]="item.imageUrl">
         {{item.description}}
